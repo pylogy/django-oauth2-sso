@@ -34,7 +34,6 @@ def authenticate_code(request):
 def redirect_to_login(request):
     auth_url = settings.OAUTH['AUTHORIZATION_URL']
     data = {
-        'scope': 'read:user',
         'response_type': 'code',
         'redirect_uri': settings.OAUTH['REDIRECT_URI'],
         'client_id': settings.OAUTH['CLIENT_ID']
